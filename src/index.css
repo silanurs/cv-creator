@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+#root {
+  box-sizing:border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Major Mono Display', cursive;
+  font-size:1rem;
+  
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+html{
+  font-size:22px;
+  font-family: 'Major Mono Display', cursive;
+}
+header{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bolder;
+  font-family: 'Major Mono Display', cursive;
+  background-color: #fdf6ce;
+  color:#87ceeb;
+  height:fit-content;
+}
+.header{
+  margin-right:33%;
+}
+.fa-lightbulb{
+ margin-right:4vw;
+  color:black;
+  font-size:1rem;
+}
+
+.cv-container{
+  margin-top: 2vh;
+  word-wrap:break-word;
+  border:2px solid black;
+  display:inline-grid;
+  grid-template-columns: 30vw 12vw;
+  column-gap: 3vw;
+  grid-template-areas: "education info"
+  "experience info";
+  background-color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
+  color:black;
+}
+.general-info{
+ grid-area:info;
+ padding-top:5vh;
+ background-color: #87ceeb;
+ padding-left:5px;
+ text-align:center;
+ 
+}
+.cv-education{
+  grid-area:education;
+  padding-left:10px;
+  min-height:50vh;
+}
+.cv-experience{
+ grid-area:experience;
+ padding-left:10px;
+ min-height:50vh;
+}
+.user-email{
+  font-size:0.5rem;
+  max-width:fit-content;
+}
+.description{
+  word-wrap:break-word;
+}
+@media print {
+  .cv-container{
+    margin-top: 2vh;
+    word-wrap:break-word;
+    border:2px solid black;
+    display:inline-grid;
+    grid-template-columns: 50vw 20vw;
+    grid-template-rows:auto;
+    column-gap: 3vw;
+    grid-template-areas: "education info"
+    "experience info";
+    background-color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+  }
+  .general-info{
+   grid-area:info;
+   padding-top:5vh;
+   background-color:#87ceeb;
+   padding-left:5px;
+   text-align:center;
+   
+  }
+  .cv-education{
+    grid-area:education;
+    padding-left:10px;
+    min-height:45vh;
+  }
+  .cv-experience{
+   grid-area:experience;
+   padding-left:10px;
+   min-height:50vh;
+  }
+  .description{
+    word-wrap:break-word;
+  }
 }
