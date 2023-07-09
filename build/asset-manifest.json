@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/silanurs/cv-creator.git/static/css/main.841e2f18.css",
-    "main.js": "/silanurs/cv-creator.git/static/js/main.df7aa537.js",
-    "index.html": "/silanurs/cv-creator.git/index.html",
-    "main.841e2f18.css.map": "/silanurs/cv-creator.git/static/css/main.841e2f18.css.map",
-    "main.df7aa537.js.map": "/silanurs/cv-creator.git/static/js/main.df7aa537.js.map"
+    "main.css": "/cv-creator/static/css/main.841e2f18.css",
+    "main.js": "/cv-creator/static/js/main.df7aa537.js",
+    "index.html": "/cv-creator/index.html",
+    "main.841e2f18.css.map": "/cv-creator/static/css/main.841e2f18.css.map",
+    "main.df7aa537.js.map": "/cv-creator/static/js/main.df7aa537.js.map"
   },
   "entrypoints": [
     "static/css/main.841e2f18.css",
