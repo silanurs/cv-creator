@@ -13,7 +13,7 @@ export default function Cv(props){
         <div className=" col-sm-8 my-5 container" id="cv-container">
          <div className="cv-container" >
           <div className="general-info">
-             <img src={props.info.photo} alt="user"></img>
+             <img src={props.photoUrl} alt="user"></img>
              <p>{props.info.name}</p>
              <p>{props.info.surname}</p>
              <p>{props.info.address}</p>

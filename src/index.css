@@ -41,7 +41,7 @@ header{
   word-wrap:break-word;
   border:2px solid black;
   display:inline-grid;
-  grid-template-columns: 30vw 12vw;
+  grid-template-columns: 35vw 14vw;
   column-gap: 3vw;
   grid-template-areas: "education info"
   "experience info";
@@ -74,13 +74,17 @@ header{
 .description{
   word-wrap:break-word;
 }
+img {
+  width:10vw;
+  height:auto;
+}
 @media print {
   .cv-container{
     margin-top: 2vh;
     word-wrap:break-word;
     border:2px solid black;
     display:inline-grid;
-    grid-template-columns: 50vw 20vw;
+    grid-template-columns: 60vw 30vw;
     grid-template-rows:auto;
     column-gap: 3vw;
     grid-template-areas: "education info"
@@ -95,7 +99,11 @@ header{
    background-color:#87ceeb;
    padding-left:5px;
    text-align:center;
-   
+   font-size:1.5rem;
+  }
+  .user-email{
+    font-size:2rem;
+    text-align:center;
   }
   .cv-education{
     grid-area:education;
@@ -109,5 +117,9 @@ header{
   }
   .description{
     word-wrap:break-word;
+  }
+  img{
+    width:20vw;
+    height:auto;
   }
 }

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Cv from './cv.js';
 
 
-export default function Form(){
+export default function Form() {
 
   const [inputs, setInputs] = useState({});
   const [textarea, setTextarea] = useState("");
+  const [url, setUrl] = useState(null);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -17,10 +18,20 @@ export default function Form(){
 
   }
   const handleSubmit = (e) => {
-    e.preventDefault();
     setInputs({});
-    setTextarea("")
+    setTextarea("");
+    setUrl(null)
   }
+  const handleFile = (e) => {
+    const file= e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend=() => {
+      setUrl(reader.result)
+    
+    }
+  }
+  
 
 
 return (
@@ -41,7 +52,7 @@ return (
       <label htmlFor="phone" className="form-label">Phone Number:</label>
       <input type="tel" id="phone" placeholder="123-456-7890"  name="phone" className="form-control form-control-sm" onChange={handleChange} value={inputs.phone || ""}></input>
       <label htmlFor="file" className="form-label">Photo:</label>
-      <input type="file" id="file" accept="image/*" name="photo" className="form-control form-control-sm" onChange={handleChange} value={inputs.photo || ""}></input>
+      <input type="file" id="file" accept="image/*" name="photo" className="form-control form-control-sm" onChange={handleFile} ></input>
       </div>
       <div id="education" className="col-xs-2">
     <h2>Education:</h2>
@@ -74,7 +85,8 @@ return (
   <button type="submit" className="save btn btn-secondary mt-3 btn-sm">Reset</button>
 </form>
 
-<Cv info={inputs} description={textarea} />
+<Cv info={inputs} description={textarea} photoUrl={url} />
 </div>
-</div>)
+</div>
+ )
 }
