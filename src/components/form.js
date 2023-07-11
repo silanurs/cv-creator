@@ -18,6 +18,7 @@ export default function Form() {
 
   }
   const handleSubmit = (e) => {
+    e.preventDefault()
     setInputs({});
     setTextarea("");
     setUrl(null)
